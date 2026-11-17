@@ -38,5 +38,20 @@ public class Demo {
         System.out.println(newDosen.nama);
         System.out.println(newDosen.nidn);
         newDosen.mengajar();
+        
+        // Contoh penerapan Arguments
+        train(dosen1);
+        train(tendik1);
+    }
+    
+    // Implementasi instanceof
+    public static void train(Pegawai pegawai) {
+        pegawai.displayInfo();
+        System.out.println("Mengenalkan lingkungan kampus");
+        System.out.println("Mrnginfokan SOP/Juknis");
+
+        if (pegawai instanceof Dosen) {
+            System.out.println("Memberikan pelatihan untuk pegawai");
+        }
     }
 }
