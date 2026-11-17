@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class Demo {
+    public static void main(String[] args) {
+        // Inisialisasi objek Dosen dan Tenaga Kependidikan
+        Dosen dosen1 = new Dosen("19940201", "Widia, S.Kom. M.Kom", "199402");
+        Dosen dosen2 = new Dosen("19700105", "Muhammad, S.T, M.T", "197001");
+        TenagaKependidikan tendik1 = new TenagaKependidikan("19750301", "Aida, A.Md.", "Tenaga Administrasi");
+        TenagaKependidikan tendik2 = new TenagaKependidikan("19650304", "Rika, S.T.", "Tenaga Laboratorium");
+
+        // Membuat ArrayList of Pegawai (Heterogeneous Collection)
+        ArrayList<Pegawai> daftarPegawai = new ArrayList<Pegawai>();
+
+        // Memasukkan objek berbeda sub-class ke dalam satu ArrayList yang sama berkat polimorfisme
+        daftarPegawai.add(dosen1);
+        daftarPegawai.add(dosen2);
+        daftarPegawai.add(tendik1);
+        daftarPegawai.add(tendik2);
+
+        // Menampilkan jumlah pegawai di dalam koleksi
+        System.out.println("Jumlah Pegawai: " + daftarPegawai.size());
+    }
+}
